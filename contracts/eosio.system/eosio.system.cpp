@@ -157,15 +157,15 @@ namespace eosiosystem {
            has_dot |= !(tmp & 0x1f);
            tmp >>= 5;
          }
-         if( has_dot ) { // or is less than 12 characters
+         if(has_dot ) { // or is less than 12 characters
             auto suffix = eosio::name_suffix(newact);
             if( suffix == newact ) {
-               name_bid_table bids(_self,_self);
-               auto current = bids.find( newact );
-               eosio_assert( current != bids.end(), "no active bid for name" );
-               eosio_assert( current->high_bidder == creator, "only highest bidder can claim" );
-               eosio_assert( current->high_bid < 0, "auction for name is not closed yet" );
-               bids.erase( current );
+               //name_bid_table bids(_self,_self);
+               //auto current = bids.find( newact );
+               //eosio_assert( current != bids.end(), "no active bid for name" );
+               //eosio_assert( current->high_bidder == creator, "only highest bidder can claim" );
+               //eosio_assert( current->high_bid < 0, "auction for name is not closed yet" );
+               //bids.erase( current );
             } else {
                eosio_assert( creator == suffix, "only suffix may create this account" );
             }

@@ -17,6 +17,7 @@ add_subdirectory(identity)
 add_subdirectory(stltest)
 add_subdirectory(test.inline)
 
+add_subdirectory(gamecoin)
 add_subdirectory(hello)
 add_subdirectory(asserter)
 add_subdirectory(proxy)
